@@ -34,6 +34,14 @@ with g2.as_default():           # operations on graph g2
     b = tf.constant(5)
 
 
+# print out the graph def
+import tensorflow as tf
+my_const = tf.constant([1.0, 2.0], name='my_const')
+my_const2 = tf.constant([1.0, 2.0], name='my_const2')
+with tf.Session() as sess:
+    print(sess.graph.as_graph_def())
+
+
 Why graphs:
 1. Save computation (only run subgraphs that lead to the values you want to fetch)
 2. Break computation into small, differential pieces to facilitates auto-differentiation

@@ -1,0 +1,18 @@
+1. Computation graph:
+    1. assembel a graph
+    2. use a session to execute operations in the graph
+
+2. Tensorborad for visualization
+
+3. tf.constant and tf.Variable
+    Constant values are stored in the graph definition
+    Sessions allocate memory to store variable values
+
+4. tf.placeholders and feed_dict
+    Feed values into placeholders by dic(feed_dict)
+    You can feed values in variables too
+
+5. Avoid lazy loading
+    1. Separate the assembling of graph and executing ops
+    2. Use python attribute to ensure a function is only loaded the first time it's called
+

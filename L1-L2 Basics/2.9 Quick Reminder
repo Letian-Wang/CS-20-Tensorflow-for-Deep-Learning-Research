@@ -1,0 +1,3 @@
+A TF program often has 2 pahses:
+    1. Assemble a graph
+    2. Use a session to execute operations in the graph
