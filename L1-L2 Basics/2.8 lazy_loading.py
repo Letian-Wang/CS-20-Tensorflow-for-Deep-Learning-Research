@@ -26,13 +26,10 @@ print(tf.get_default_graph().as_graph_def())
 # multiple add node:
 #   Graph gets bloated, slow to load, expensive to pass around
         
-
-
 ''' Solution '''
 # 1. Separate definition of ops from computing/running ops
 # 2. Use python property to ensure function is also loaded once the first time it is called
 #       Especailly for prediction
-
 
 ''' Using property '''
 Just splitting the code into fnctiosn doesn't work, since every time the functiosn are called, the graph would be extended by new code.

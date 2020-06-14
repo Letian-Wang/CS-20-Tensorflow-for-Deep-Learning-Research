@@ -31,7 +31,6 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
 
 ''' phase 2 : train our model '''
 with tf.Session() as sess:
-    writer = tf.summary.FileWriter('./my_graph/03/logistic_reg', sess.graph)
     start_time = time.time()
     sess.run(tf.global_variables_initializer())
     n_batches = int(mnist.train.num_examples/batch_size)

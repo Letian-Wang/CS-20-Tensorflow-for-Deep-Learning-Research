@@ -7,10 +7,7 @@ tf.constant(value, dtype=None, shape=None, name='Const', verify_shape=False)
 a = tf.constant(2, shape = [2,2], verify_shape=True)
 b = tf.constant(2, shape = [2,2])
 
-tf.InteractiveSession()
-
-
-###3
+# constant operation
 a = tf.constant([2, 2], name="a")
 b = tf.constant([[0,1], [2,3]], name="b")
 x = tf.add(a, b, name="add")
@@ -19,6 +16,9 @@ with tf.Session() as sess:
     x, y = sess.run([x, y])
     print(x, y)
 
+
+
+''' fill '''
 tf.zeros(shape, dtype=tf.float32, name=None)
 tf.zeros([2, 3], tf.int32)
 # input_tensor is [0,1],[2,3],[4,5]
@@ -33,7 +33,7 @@ tf.fill([2,3], 8)       #[[8,8,8], [8,8,8]]
 # 1. create numpy array a
 # 2. a.fill(value)
 
-
+''' list '''
 tf.linspace(start, stop, num, name=None)
 tf.linspace(10.0, 13.0, 4)
 
@@ -44,7 +44,7 @@ tf.range(5)
 
 
 
-# randomly generated constants
+''' random '''
 tf.random_normal(shape, mean=0.0, stddev=1.0, dtype=tf.float32, seed=None, name=None)
 tf.truncated_normal(shape, mean=0.0, stddev=1.0, dtype=tf.float32, seed=None, name=None)    
 # if sample is 2 stddevs away from mean, truncate it and resample

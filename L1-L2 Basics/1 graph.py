@@ -34,7 +34,7 @@ with g2.as_default():           # operations on graph g2
     b = tf.constant(5)
 
 
-# print out the graph def
+''' print out the graph def '''
 import tensorflow as tf
 my_const = tf.constant([1.0, 2.0], name='my_const')
 my_const2 = tf.constant([1.0, 2.0], name='my_const2')

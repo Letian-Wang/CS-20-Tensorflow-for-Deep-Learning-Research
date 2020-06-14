@@ -52,3 +52,14 @@ class Model(self):
         y = self.add_model()
         self.loss = self.add_loss_op(y)
         self.predictions=tf.nn.softmax(y)
+
+
+
+''' another model '''
+class NERModel(LanguageModel):
+    def load_data(self, debug=False):
+
+    def add_placeholders(self):
+        self.input_placeholder = tf.placehodler(tf.init32, [None, self.config.window_size])
+        self.labels_placeholder = tf.placeholder(tf.float32, [None, self.config.label_size])
+        

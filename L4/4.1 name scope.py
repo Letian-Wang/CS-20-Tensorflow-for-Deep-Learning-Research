@@ -1,13 +1,13 @@
 # Phase 1 : Assemble graph
 # 1. Define placeholders for input and output
-# 2. Define variables and build the model
+# 2. Define inference and model
 # 3. Define loss function
 # 4. Define optimizer
 
 # Phase 2 : Compute
 # 1. Initialize model parameters
 # 2. Input training data
-# 3. Execute inference model on training data
+# 3. Execute inference on training data
 # 4. Compute loss
 # 5. Adjust model paramter (return to 2)
 

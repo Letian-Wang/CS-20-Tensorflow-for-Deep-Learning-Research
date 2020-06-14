@@ -16,3 +16,4 @@ loss_batch, _, summary = sess.run([model.loss, model.optimizer, model.summary_op
 
 # Step3； write summaries to file
 writer.add_summary(summary, global_step=step)
+
